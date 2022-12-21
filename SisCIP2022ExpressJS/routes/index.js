@@ -21,6 +21,7 @@ router.get('/login', function(req, res, next) {
   res.render('login');
 });
 
+
 router.post('/dashboard', function(req, res, next) {
   email=req.body.email;
   password=req.body.password;
@@ -169,3 +170,6 @@ router.post('/update', crud.update)
 router.post('/updateevent', crud.updateevent)
 
 module.exports = router;
+
+module.exports = router;
+

@@ -8,6 +8,12 @@ var connection = mysql.createConnection({
 	database:'medicocr'
 });
 
+
+	//nombre de la tabla
+	database:'centromedicocr'
+;
+// definir conexion
+
 connection.connect(function(error){
 	if(!!error) {
 		console.log(error);
