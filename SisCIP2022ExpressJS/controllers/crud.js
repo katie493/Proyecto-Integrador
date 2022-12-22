@@ -38,6 +38,7 @@ exports.update = (req, res)=>{
     })
 }
 
+<<<<<<< HEAD
 //clientes
 exports.savecli=(req, rest)=>{
     const cli_nombre=req.body.cli_nombre;
@@ -77,6 +78,11 @@ exports.updatecli = (req, res)=>{
         }
     })
 }
+=======
+
+
+<<<<<<< HEAD
+>>>>>>> 7e29d14f007fb06760aa20435abf318a9b0e43e3
 
 
 exports.savepro=(req, rest)=>{
@@ -110,6 +116,7 @@ exports.updatepro = (req, res)=>{
     })
 }
 
+<<<<<<< HEAD
 exports.saveatencion=(req, rest)=>{
     const at_fecha=req.body.at_fecha;
     const at_numero=req.body.at_numero;
@@ -130,6 +137,11 @@ exports.saveatencion=(req, rest)=>{
 }
 
 
+=======
+
+=======
+>>>>>>> fcbc6047fa3366f929524319525cc1c04b841e3c
+>>>>>>> 7e29d14f007fb06760aa20435abf318a9b0e43e3
 exports.saveevent=(req, rest)=>{
     const evento_nombre=req.body.evento_nombre;
     const evento_descripcion=req.body.evento_descripcion;
