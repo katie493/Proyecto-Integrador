@@ -33,8 +33,6 @@
                         </thead>
                         <tbody>
                             <% results.forEach((userpro)=> { %>
-
-                            
                             <tr>
                                 <td><%= userpro.prod_id %></td>
                                 <td><%= userpro.prod_nombre %></td>
@@ -43,13 +41,14 @@
                                 <td><%= userpro.prod_stock %></td>
                                 <td>
                                     <a href="/editpro/<%= userpro.prod_id %>" class="btn btn-outline-info">VER</a>
-                                    <a href="/deletepro/<%= userpro.prod_id %>" class="btn btn-outline-danger">borrar</a>
+                                    <!-- <a href="/deletepro/<%= userpro.prod_id %>" class="btn btn-outline-danger">borrar</a> -->
                                 </td>
                             </tr>
                         <% }) %>
                         </tbody>
                     </table>
                 </div>
+                
                 <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
                 <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
                 <script src="https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap5.min.js"></script>

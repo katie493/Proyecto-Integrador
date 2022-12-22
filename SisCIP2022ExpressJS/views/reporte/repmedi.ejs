@@ -22,10 +22,29 @@
         <%- include('../partials/logout'); %>
         <div class="relative bg-gray-200 md:pt-32 pb-32">
             <div class="px-4 md:px-10 mx-auto w-full">
-                <div class="block p-6 rounded-lg shadow-lg bg-white max-w-md container m-auto mt-6">
+              <div class="container">
+                <table id="producto" class="table table-bordered table striped text-center mt-4">
+                    <thead>
+                        <tr class="bg-primary text-white">
+                            <th scope="col">ID</th>
+                            <th scope="col">NOMBRE</th>
+                            <th scope="col">MARCA</th>
+                            <th scope="col">STOCK</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% results.forEach((userpro)=> { %>
+                        <tr>
+                            <td><%= userpro.prod_id %></td>
+                            <td><%= userpro.prod_nombre %></td>
+                            <td><%= userpro.prod_marca %></td>
+                            <td><%= userpro.prod_stock %></td>
+                        </tr>
+                    <% }) %>
+                    </tbody>
+                </table>
+            </div>
 
-
-                  </div>
             </div>
         </div>
     </div>

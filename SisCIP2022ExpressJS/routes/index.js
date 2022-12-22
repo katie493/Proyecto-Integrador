@@ -21,13 +21,6 @@ router.get('/login', function(req, res, next) {
   res.render('login');
 });
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> fcbc6047fa3366f929524319525cc1c04b841e3c
->>>>>>> 7e29d14f007fb06760aa20435abf318a9b0e43e3
 router.post('/dashboard', function(req, res, next) {
   email=req.body.email;
   password=req.body.password;
@@ -72,10 +65,6 @@ router.get('/productos', (req, res)=>{
      }
   })
 })
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 7e29d14f007fb06760aa20435abf318a9b0e43e3
 router.get('/creapro', (req, res)=>{
   res.render('productos/creapro');
 })
@@ -91,7 +80,6 @@ router.get('/editpro/:prod_id', (req, res)=>{
 
 });
 
-<<<<<<< HEAD
 /* router.get('/clientes', function(req, res, next) {
   dbConn.query('SELECT * FROM clientes ORDER BY idx asc',function(err,rows)     {
     if(err) {
@@ -117,28 +105,16 @@ router.get('/creacli', (req, res)=>{
   res.render('clientes/creacli');
 })
 router.get('/editcli/:cli_id', (req, res)=>{
-=======
-
-
-
-
-router.get('/eventocli/:cli_id', (req, res)=>{
->>>>>>> 7e29d14f007fb06760aa20435abf318a9b0e43e3
   const cli_id = req.params.cli_id;
   dbConn.query('SELECT * FROM clientes WHERE cli_id = ?',[cli_id], (error, results)=>{
     if(error){
       throw error;
   }else{
-<<<<<<< HEAD
       res.render('clientes/editcli', {usercli:results[0]});
-=======
-      res.render('evento/eventcli', {usercli:results[0]});
->>>>>>> 7e29d14f007fb06760aa20435abf318a9b0e43e3
   }
   })
 });
 
-<<<<<<< HEAD
 router.get('/atencioncli/:cli_id', (req, res)=>{
   const cli_id = req.params.cli_id;
   dbConn.query('SELECT * FROM clientes WHERE cli_id = ?',[cli_id], (error, results)=>{
@@ -149,28 +125,30 @@ router.get('/atencioncli/:cli_id', (req, res)=>{
   }
   })
 });
-=======
-router.get('/eventoclient', (req, res)=>{
-=======
 
-router.get('/clientes', (req, res)=>{
->>>>>>> fcbc6047fa3366f929524319525cc1c04b841e3c
+router.get('/eventocli/:cli_id', (req, res)=>{
+  const cli_id = req.params.cli_id;
+  dbConn.query('SELECT * FROM clientes WHERE cli_id = ?',[cli_id], (error, results)=>{
+    if(error){
+      throw error;
+  }else{
+      res.render('evento/eventcli', {usercli:results[0]});
+  }
+  })
+});
+
+router.get('/eventoclient', (req, res)=>{
   dbConn.query('SELECT * FROM clientes', (error, results)=>{
      if(error){
          throw error;
      }else{
-<<<<<<< HEAD
          res.render('evento/listacli', {results:results});
-=======
-         res.render('clientes/list', {results:results});
->>>>>>> fcbc6047fa3366f929524319525cc1c04b841e3c
      }
   })
 })
 
 
 
->>>>>>> 7e29d14f007fb06760aa20435abf318a9b0e43e3
 
 
 
@@ -245,46 +223,26 @@ router.get('/editevento/:evento_id', (req, res)=>{
 router.get('/reporte', (req, res)=>{
   res.render('reporte/reportes');
 })
-router.get('/repevento', (req, res)=>{
-  res.render('reporte/repevento');
-})
-router.get('/reppaciente', (req, res)=>{
-  res.render('reporte/reppaciente');
-})
 router.get('/repmedi', (req, res)=>{
-  res.render('reporte/repmedi');
+  dbConn.query('SELECT * FROM productos', (error, results)=>{
+     if(error){
+         throw error;
+     }else{
+         res.render('reporte/repmedi', {results:results});
+     }
+  })
 })
 
 const crud = require('../controllers/crud');
 router.post('/save', crud.save)
-<<<<<<< HEAD
 router.post('/savecli', crud.savecli)
 router.post('/saveatencion', crud.saveatencion)
 router.post('/saveclievent', crud.saveclievent)
-=======
-<<<<<<< HEAD
->>>>>>> 7e29d14f007fb06760aa20435abf318a9b0e43e3
 router.post('/savepro', crud.savepro)
 router.post('/saveevent', crud.saveevent)
 router.post('/update', crud.update)
 router.post('/updatepro', crud.updatepro)
 router.post('/updateevent', crud.updateevent)
-<<<<<<< HEAD
 router.post('/updatecli', crud.updatecli)
 
 module.exports = router;
-=======
-
-
-module.exports = router;
-=======
-router.post('/saveevent', crud.saveevent)
-router.post('/update', crud.update)
-router.post('/updateevent', crud.updateevent)
-
-module.exports = router;
-
-module.exports = router;
-
->>>>>>> fcbc6047fa3366f929524319525cc1c04b841e3c
->>>>>>> 7e29d14f007fb06760aa20435abf318a9b0e43e3
