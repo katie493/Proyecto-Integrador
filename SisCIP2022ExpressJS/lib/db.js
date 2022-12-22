@@ -5,10 +5,22 @@ var connection = mysql.createConnection({
 	host:'localhost',
 	user:'root',
 	password:'',
+<<<<<<< HEAD
 	//nombre de la tabla
 	database:'medicocr'
 });
 // definir conexion
+=======
+	database:'medicocr'
+});
+
+
+	//nombre de la tabla
+	database:'centromedicocr'
+;
+// definir conexion
+
+>>>>>>> fcbc6047fa3366f929524319525cc1c04b841e3c
 connection.connect(function(error){
 	if(!!error) {
 		console.log(error);

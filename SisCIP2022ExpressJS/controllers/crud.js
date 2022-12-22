@@ -40,6 +40,7 @@ exports.update = (req, res)=>{
 
 
 
+<<<<<<< HEAD
 
 
 exports.savepro=(req, rest)=>{
@@ -74,6 +75,8 @@ exports.updatepro = (req, res)=>{
 }
 
 
+=======
+>>>>>>> fcbc6047fa3366f929524319525cc1c04b841e3c
 exports.saveevent=(req, rest)=>{
     const evento_nombre=req.body.evento_nombre;
     const evento_descripcion=req.body.evento_descripcion;

@@ -21,6 +21,10 @@ router.get('/login', function(req, res, next) {
   res.render('login');
 });
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> fcbc6047fa3366f929524319525cc1c04b841e3c
 router.post('/dashboard', function(req, res, next) {
   email=req.body.email;
   password=req.body.password;
@@ -65,6 +69,7 @@ router.get('/productos', (req, res)=>{
      }
   })
 })
+<<<<<<< HEAD
 router.get('/creapro', (req, res)=>{
   res.render('productos/creapro');
 })
@@ -96,11 +101,19 @@ router.get('/eventocli/:cli_id', (req, res)=>{
 });
 
 router.get('/eventoclient', (req, res)=>{
+=======
+
+router.get('/clientes', (req, res)=>{
+>>>>>>> fcbc6047fa3366f929524319525cc1c04b841e3c
   dbConn.query('SELECT * FROM clientes', (error, results)=>{
      if(error){
          throw error;
      }else{
+<<<<<<< HEAD
          res.render('evento/listacli', {results:results});
+=======
+         res.render('clientes/list', {results:results});
+>>>>>>> fcbc6047fa3366f929524319525cc1c04b841e3c
      }
   })
 })
@@ -193,6 +206,7 @@ router.get('/repmedi', (req, res)=>{
 
 const crud = require('../controllers/crud');
 router.post('/save', crud.save)
+<<<<<<< HEAD
 router.post('/savepro', crud.savepro)
 router.post('/saveevent', crud.saveevent)
 router.post('/update', crud.update)
@@ -201,3 +215,13 @@ router.post('/updateevent', crud.updateevent)
 
 
 module.exports = router;
+=======
+router.post('/saveevent', crud.saveevent)
+router.post('/update', crud.update)
+router.post('/updateevent', crud.updateevent)
+
+module.exports = router;
+
+module.exports = router;
+
+>>>>>>> fcbc6047fa3366f929524319525cc1c04b841e3c
